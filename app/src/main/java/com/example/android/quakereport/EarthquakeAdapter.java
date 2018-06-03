@@ -26,7 +26,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         Earthquake earthquake = getItem(position);
 
         String location = earthquake.getLocation();
-        String time     = earthquake.getTime();
+        String time     = String.valueOf(earthquake.getTime());
         String mag      = String.valueOf(earthquake.getMag());
 
         TextView locationView   = (TextView) convertView.findViewById(R.id.location);
