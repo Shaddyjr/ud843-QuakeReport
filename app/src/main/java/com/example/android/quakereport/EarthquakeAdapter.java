@@ -26,14 +26,17 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         Earthquake earthquake = getItem(position);
 
         String location = earthquake.getLocation();
-        String time     = String.valueOf(earthquake.getTime());
+        String time     = earthquake.getTime();
+        String date     = earthquake.getDate();
         String mag      = String.valueOf(earthquake.getMag());
 
         TextView locationView   = (TextView) convertView.findViewById(R.id.location);
         TextView timeView       = (TextView) convertView.findViewById(R.id.time);
+        TextView dateView       = (TextView) convertView.findViewById(R.id.date);
         TextView magView        = (TextView) convertView.findViewById(R.id.mag);
 
         locationView.setText(location);
+        dateView.setText(date);
         timeView.setText(time);
         magView.setText(mag);
 
