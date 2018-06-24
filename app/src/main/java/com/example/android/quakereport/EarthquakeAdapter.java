@@ -19,12 +19,13 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
     private static final String LOCATION_SEPARATOR = " of ";
 
-    EarthquakeAdapter(Activity context, ArrayList<Earthquake> earthquakes){
+    EarthquakeAdapter(Activity context, List<Earthquake> earthquakes){
         super(context, 0, earthquakes);
     }
 
